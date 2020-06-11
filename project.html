@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="DSC106 HW1">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="Catherine Tao">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DSC106 Project</title>
+
+        <!-- Link Fonts BEFORE stylesheet-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+        <!-- stylesheet -->
+        <link rel='stylesheet' type='text/css' href='project.css'>
+
+        <!-- Boostrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Boostrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <script rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'></script>
+
+
+        <!-- Import highcharts -->
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/modules/timeline.js"></script>
+
+        <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+        <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+        
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    </head>
+
+    <body>
+
+<!-------------------- NAV BANNER -------------------->
+<section id='nav-bar'>
+        <nav class="navbar navbar-expand-lg navbar-light"> 
+            <a class="navbar-brand" href="#"><img src="SpotifyLogo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lineHigh">Valence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pieTitle">Tempo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#spyder">Misc.</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bar" tabindex="-1" aria-disabled="true">Genres</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+<!-------------------- TITLE -------------------->
+    <div class='introBody'>
+        <br><br><br><br><br><br><br>
+        <h1 id='title'> What changed in music? </h1>
+    </div>
+
+    <div id='intro'>
+        <br><br><br><br>
+        <h2 id='openP'> Music is a timeless, universal language that strongly impacts individuals and societies. As music lovers, we analyzed differences in attributes of popular music throughout the last century and explored whether they reflect changes in how we consume music. 
+        </h2>
+        <br><br><br>
+    
+        <section class='terms'>
+            <section>
+                <h1 id='term'>Valence</h1>
+                <h1> 🌅 </h1>
+                <p> Positiveness of song. High valence is considered happy while low valence is considered sad
+                </p>
+            </section>
+            <section>
+                <h1 id='term'> Tempo</h1>
+                <h1> ⏩ </h1>
+                <p> Speed of the track in beats per minute
+                </p>
+            </section>
+            <section>
+                <h1 id='term'> Danceabilility</h1>
+                <h1> 💃</h1>
+                <p> How danceable a track is based on features like beat, rhythm, and tempo
+                </p>
+            </section>
+            <section>
+                <h1 id='term'> Loudness</h1>
+                <h1> 🔈</h1>
+                <p> How loud a track is presented in decibals
+                </p>
+            </section>
+            <section>
+                <h1 id='term'> Energy</h1>
+                <h1> ⚡</h1>
+                <p> Intensity and activity of a track based on features like tempo and loudness
+                </p>
+            </section>
+        </section>
+        <br><br>
+        <p>** All attributes above range from 0 to 1 ** </p>
+    </div>  
+
+
+    <!-------------------- LINE GRAPH -------------------->
+    <section class='line'>
+        <section>
+            <figure> 
+                <div id="lineHigh" style = "height: 600px"></div>
+            </figure>
+        </section>
+        <section>
+            <br><br><br><br><br><br>
+            <h1>Emotions in Time</h1>
+            <p id='lineP'>Throughout the past century, Spotify data shows that people's musical preference based on valence levels have changed. Between 1921-1953 we see that the graph is volatile while the years proceeding appear more stable.</p>
+           
+        </section>
+    </section>
+
+<!-------------------- PIE GRAPH -------------------->
+
+    <section id='pie'>
+        <h1 id='pieTitle'>A Fast Change in Music</h1>
+        <p id='pieCap'> Proportions of fast and slow songs are roughly equal in the year with lowest median valence (1946), whereas fast songs dominate in higher valence years (1979). Though valence of music has been decreasing, people nowadays generally prefer music with faster tempo.</p>
+        <br><br>
+        <div class='pieBox'>
+            <div id="pieHigh1946" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+            <div id="pieHigh1979" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+            <div id="pieHigh2019" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+        </div>
+    </section>
+
+<!-------------------- SPYER GRAPH -------------------->
+
+
+<div id='spyderText'>
+    <h1>Changes in Popular Songs</h1>
+        <p>Despite the 20 year difference, the top popular songs of the years displayed focus on different attributes of music. In 1980, <em>Call Me</em> focused on energy, valence, and tempo. In 2000, <em>Breathe</em> focused on tempo, danceability, and energy. In 2019, <em>Old Town Road</em> focused on danceability and loudness.</p>
+    </div>
+    <section id='spyder'>
+        <section>
+            <h4> Listen to these BillBoard #1 hits!</h4>
+            <br><br>
+            <p> 2019 - 	<b>"Old Town Road"</b> by Lil Nas X featuring Billy Ray Cyrus</p>
+            <audio controls>
+                <source src="2019.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <br><br>
+            <p> 2000 - 	<b>"Breathe"</b> by Faith Hill</p>
+            <audio controls>
+                <source src="2000.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <br><br>
+            <p> 1980 - 	<b>"Call Me"</b> by Blondie Rock</p>
+            <audio controls>
+                <source src="1980.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <figure> 
+                <div id='chart-container'></div>
+            </figure>
+        </section>
+
+    </section>
+    <br>
+    <!-------------------- BAR GRAPH -------------------->
+
+    <section id='bar'>
+        <section>
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+        </figure>
+        </section>
+
+        <section>
+            <br><br><br><br>
+            <h1>Common Musical Genres</h1>
+            
+            <p class="highcharts-description">
+            Within the past century, the eight most common genres and their median valence values are shown.  Tropical music has overall been the most common genre.
+            </p>
+        </section> 
+    </section>  
+    <br><br><br><br><br><br><br><br>
+    <hr>
+
+    <p>Written by <em>Kai Pang</em> and <em>Catherine Tao</em></p>
+    <p>DSC106 Final Project Spring 2020</p>
+    <!-- <div id="container"></div> -->
+
+
+    <!-- connect project.js file -->
+    <script src="project.js"></script>
+
+</body>
+</html>
