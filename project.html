@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="DSC106 HW1">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="Catherine Tao">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DSC106 Project</title>
+
+        <!-- stylesheet -->
+        <link rel='stylesheet' type='text/css' href='project.css'>
+
+        <!-- import statements -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/modules/timeline.js"></script>
+
+        <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+        <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+        
+
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+        <script src="https://code.highcharts.com/modules/annotations.js"></script>
+
+    </head>
+    <body>
+    <h1 id='title'>Emotions and Music Throughout the Years</h1>
+    <h3 id='subtitle'>Presented by Kai Pang and Catherine Tao</h3>
+
+    <br>
+    <br>
+    
+    <div>
+        <img class='logo' src="SpotifyLogo.png" alt="SpotifyLogo.jpg">
+    </div>
+
+    <br>
+    <br>
+
+    <h3 id='explain'>For our project, we chose to focus on different attributes for musical tracks which we analyze to determine an individual's feelings and emotions. The different attributes we chose to analyze include valence, tempo, danceability, loudness, and energy.</h3>
+    <h4 id='valence'>Valence: Describes the positiveness within a song analyzed on a scale between 0 to 1.  High valence is considered positive (energetic, cheerful) while low valence is considered negative (sad, depressing)</h4>
+    <h4 id='tempo'>Tempo: Describes the speed of the track in terms of beats per minute, measured on a scale between 0 to 1</h4>
+    <h4 id='dance'>Danceability: Descibres how danceable a track is based on features such as beat, rhythm, and tempo.  Measured on a scale between 0 to 1.</h4>
+    <h4 id='loud'>Loudness: Describes how loud a track is presented in decibals.  Measured on a scale between 0 to 1.</h4>
+    <h4 id='energy'>Energy: Describes the intensity and activity of a track based on features such as tempo and loudness.  Measured on a scale between 0 to 1.</h4>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <div id="lineHigh" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+        <h1>Emotions in Time</h1>
+        <p>Throughout the past years, Spotify data shows that people's musical preference based on valence levels have changed.</p>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+  
+    <h1>A Fast Change in Music</h1>
+    <div class='pieBox'>
+        <div id="pieHigh1946" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+        <div id="pieHigh1979" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+        <div id="pieHigh2019" style = "min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+    </div>
+    
+    <p>The type of tempo has changed throughout time.  Our data shows that people in the modern age prefer to listen to music with a faster paced tempo.</p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class='spider'>
+        <div id='chart-container'></div>
+        <h3>Changes in Popular Songs</h3>
+        <p>Despite 20 year margin differences, the top popular songs of the years shown displayed focus on different attributes of music.</p>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <h3>Common Musical Genres</h3>
+        <p class="highcharts-description">
+        The eight most common genres presented 
+        </p>
+    </figure>
+
+    <!-- <div id="container"></div> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- connect project.js file -->
+    <script src="project.js"></script>
+
+</body>
+</html>
